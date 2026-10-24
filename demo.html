@@ -1,1 +1,45 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>REAPER Console Walkthrough | Dustin Summerour</title><link rel="stylesheet" href="css/style.css"></head><body><header class="site-header"><div class="container nav-wrapper"><a class="site-title" href="index.html#projects">&larr; Dustin Summerour / Projects</a></div></header><main class="section"><div class="container narrow"><p class="section-label">Project walkthrough</p><h1>REAPER C++ Console</h1><p>This is an image-based walkthrough of the verified Week 2 console run. Week 3 additionally includes task summary counts, priority sorting, CPU/memory snapshots, and CTest regression coverage.</p><img src="images/reaper-console.png" alt="Full REAPER console run screenshot showing a task created, viewed, completed, and viewed again" style="width:100%; border:1px solid #3a3449; border-radius:8px;"><h2>How the console works</h2><p>1. Create a task and choose a priority. 2. View tasks by status. 3. Complete a task by ID. 4. Review the updated status and exit. The console validates numeric input and explains invalid choices instead of unexpectedly ending a session.</p><p>My Week 4 showcase video will be added here when it is recorded.</p><p><a class="button primary" href="index.html#projects">Back to portfolio</a></p></div></main></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="REAPER C++ final project walkthrough with authentic application and CTest screenshots">
+  <title>REAPER Final Project Walkthrough | Dustin Summerour</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="site-title" href="index.html#projects">&larr; Portfolio / REAPER Project</a>
+      <nav aria-label="Project navigation"><a class="text-link" href="index.html#projects">Back to Projects</a></nav>
+    </div>
+  </header>
+  <main id="main" class="section">
+    <div class="container narrow">
+      <p class="section-label">Final Project &amp; Portfolio I showcase</p>
+      <h1>REAPER C++ Console</h1>
+      <p>REAPER is a C++17 task-management application with focused CPU and memory monitoring. This image-based walkthrough shows authentic Windows Terminal captures from the finished application and its CMake/CTest verification.</p>
+      <p>The final build supports task creation, priority sorting, active/completed filters, task completion, safe numeric input, and persistent task storage across restarts. It uses dedicated Task, TaskManager, TaskStorage, UserInterface, and SystemMonitor classes.</p>
+
+      <h2>1. Compile and test the final build</h2>
+      <p>The final program was compiled and linked using CMake. All three CTest suites passed: task-management tests, persistence round-trip tests, and console integration tests.</p>
+      <img class="evidence-image" src="images/final-build.png" alt="Windows Terminal showing final C++ compilation and all three CTest suites passing" loading="lazy">
+
+      <h2>2. Run and manage tasks</h2>
+      <p>The console accepts task titles and priorities, lists tasks by status, and sorts tasks from high to low priority. Its menus offer clear task counts and completion options.</p>
+      <img class="evidence-image" src="images/final-run.png" alt="Final REAPER console displaying prioritized tasks and successful save operation" loading="lazy">
+
+      <h2>3. Confirm persistence and system status</h2>
+      <p>Saved tasks are restored on the next run. This screenshot also demonstrates completion tracking and the live system-status display with logical processor count and available physical memory.</p>
+      <img class="evidence-image" src="images/final-features.png" alt="Final REAPER console showing completed task, CPU count, RAM status, and saved tasks" loading="lazy">
+
+      <h2>What I learned</h2>
+      <p>I initially planned a wider systems platform, but refined the course scope after instructor feedback. Implementing versioned task persistence and validating saved records before changing live data taught me the value of class responsibility, failure recovery, and automated regression testing.</p>
+      <p>The repository for this course project is private; these public screenshots document the final application without publishing source code that is not intended for open access.</p>
+      <p><a class="button primary" href="index.html#projects">Back to portfolio</a></p>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><p>&copy; 2026 Dustin Summerour. Final REAPER project walkthrough.</p></div></footer>
+</body>
+</html>

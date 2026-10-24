@@ -64,25 +64,26 @@
         <p class="section-intro">A focused Project &amp; Portfolio I application that builds a task-management foundation and adds a small, testable systems-monitoring capability.</p>
         <div class="project-grid">
           <article class="project-card">
-            <img class="reaper-screenshot" src="images/reaper-console.png" alt="Screenshot of the REAPER command-line task manager adding, displaying, and completing a high-priority task">
+            <img class="reaper-screenshot" src="images/reaper-console.png" alt="Genuine final REAPER Windows Terminal capture showing tasks with high and medium priorities and successful persistence">
             <div class="project-content">
               <p class="project-type">C++17 · CMake · Git &amp; GitHub · CTest</p>
               <h3>A working console application</h3>
-              <p>REAPER organizes task creation and completion around dedicated C++ classes and a simple console interface. I later expanded it with focused CPU and physical-memory status reporting while keeping the original task-management features maintainable.</p>
+              <p>REAPER organizes task creation, completion, and file persistence through dedicated C++17 classes and a focused console interface. The final application also reports CPU and physical memory information while keeping the task-management features testable and maintainable.</p>
               <h4>Key features</h4>
               <ul>
                 <li>Create tasks with Low, Medium, or High priority; filter active and completed tasks.</li>
                 <li>Sort tasks by priority, view summary counts, and complete tasks by ID.</li>
-                <li>Validate user input, handle invalid IDs safely, and separate monitoring from task logic.</li>
-                <li>Run regression tests with CTest and track improvements through Git branches and pull requests.</li>
+                <li>Save and restore task IDs, titles, priorities, and completion states across sessions.</li>
+                <li>Validate input and reject malformed save files without overwriting existing data.</li>
+                <li>Run three automated test suites with CTest and track improvements through GitHub Issues and pull requests.</li>
               </ul>
               <h4>Challenge &amp; what I learned</h4>
-              <p>The biggest constraint was scope: REAPER began as a much larger systems concept. After instructor feedback, I narrowed the course deliverable to a reliable console foundation, refactored task lookup into a dedicated class, and used regression tests to catch input and status-handling problems. This reinforced the value of clear class responsibilities and testing changes before adding features.</p>
+              <p>My main challenge was controlling scope while making the application dependable. After instructor feedback, I narrowed the course deliverable, separated task, interface, and storage responsibilities, and tested save/load edge cases so corrupted files do not replace valid in-memory task data. The biggest lesson was to verify each improvement before adding more features.</p>
               <div class="project-links">
                 <a class="text-link" href="demo.html">View project walkthrough</a>
                 <a class="text-link" href="https://github.com/Itchigo420" target="_blank" rel="noopener">GitHub profile</a>
               </div>
-              <p class="availability-note">Course source repository is private; source access can be requested for review. A final showcase video is being prepared for Week 4.</p>
+              <p class="availability-note">This project’s course source repository is private. The public walkthrough includes genuine final build, runtime, and feature screenshots. Repository access can be requested for academic review.</p>
             </div>
           </article>
         </div>
